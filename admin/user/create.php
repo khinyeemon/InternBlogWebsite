@@ -66,14 +66,10 @@ sweetAlert('create a user', 'index.php?page=user');
                 <option value="admin">Admin</option>
                 <option value="user">User</option>
               </select>
-            </div>
-            <button class="btn btn-primary" name="userCreateBtn" type="submit">Submit</button>
+              <button class="btn btn-primary mt-2" name="userCreateBtn" type="submit">Submit</button>
           </form>
         </div>
       </div>
     </div>
-
-
-
   </div>
 </div>

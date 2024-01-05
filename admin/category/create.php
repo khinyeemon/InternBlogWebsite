@@ -17,8 +17,6 @@ sweetAlert('created a category', 'index.php?page=categories');
 }
 }
 ?>
-
-
 <div class="container-fluid">
   <!-- Content Row -->
   <div class="row">
@@ -36,14 +34,10 @@ sweetAlert('created a category', 'index.php?page=categories');
               <label for="">Name</label>
               <input type="text" class="form-control" name="name">
               <span class="text-danger"><?php echo $nameerr ?></span>
-            </div>
-            <button class="btn btn-primary" name="categroyCreateBtn" type="submit">Submit</button>
+              <button class="btn btn-primary mt-2" name="categroyCreateBtn" type="submit">Submit</button>
           </form>
         </div>
       </div>
     </div>
-
-
-
   </div>
 </div>

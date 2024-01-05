@@ -40,9 +40,7 @@ sweetAlert('update a category', 'index.php?page=categories');
               <label for="">Name</label>
               <input type="text" class="form-control" value="<?php echo $category->name?>" name="name">
               <span class="text-danger"><?php echo  $nameErr ?></span>
-
-            </div>
-            <button class="btn btn-primary" name="categroyUpdateBtn" type="">Update</button>
+              <button class="btn btn-primary mt-2" name="categroyUpdateBtn" type="">Update</button>
           </form>
         </div>
       </div>

@@ -184,6 +184,7 @@ require_once('layout/sidebar.php');
               </div>
             </div>
           </div>
+
         </div>
       </div>
 

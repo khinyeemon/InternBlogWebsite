@@ -44,63 +44,61 @@ elseif($content==''){
 $result=$stmt->execute();
 if($result){
   ?>
-  <script>
-    sweetAlert('update a blog','index.php?page=blog');
-  </script>
-  <?php
+<script>
+sweetAlert('update a blog', 'index.php?page=blog');
+</script>
+<?php
 }
 }
 ?>
 <div class="container-fluid">
-                    <!-- Content Row -->
-                    <div class="row">
-                                <div class="col-md-12">
-                                  <div class="card shadow mb-4">
-                                <div class="card-header py-3 d-flex justify-content-between align-items-center ">
-                        <h6 class="m-0 font-weight-bold text-primary">Blog Update Form </h6>
-                          <a href="index.php?page=blog" class="btn btn-primary btn-sm "><i class="fa fa-backward p-2" aria-hidden="true"></i>Back</a>
-                        </div>
-                                <div class="card-body">
-                                    <form action="" method="post" enctype="multipart/form-data">
-                                        <div class="mb-2">
-                                            <label for="">Title</label>
-                                            <input type="text" class="form-control" name="title" value="<?php echo $blog->title ?>">
-                                            <span class="text-danger"><?php echo $titleErr?></span>
-                                        </div>
-                                        <div class="mb-2">
-                                            <label for=""> Select Category</label>
-                                            <select name="category_id" id="" class="form-control"> 
-                                              <option value="">Select Category</option>
-                                              <?php foreach($categories as $category):?>
-                                                <option value="<?php echo $category->id?>"
-                                                 <?php 
+  <!-- Content Row -->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex justify-content-between align-items-center ">
+          <h6 class="m-0 font-weight-bold text-primary">Blog Update Form </h6>
+          <a href="index.php?page=blog" class="btn btn-primary btn-sm "><i class="fa fa-backward p-2"
+              aria-hidden="true"></i>Back</a>
+        </div>
+        <div class="card-body">
+          <form action="" method="post" enctype="multipart/form-data">
+            <div class="mb-2">
+              <label for="">Title</label>
+              <input type="text" class="form-control" name="title" value="<?php echo $blog->title ?>">
+              <span class="text-danger"><?php echo $titleErr?></span>
+            </div>
+            <div class="mb-2">
+              <label for=""> Select Category</label>
+              <select name="category_id" id="" class="form-control">
+                <option value="">Select Category</option>
+                <?php foreach($categories as $category):?>
+                <option value="<?php echo $category->id?>" <?php 
                                                  if($blog->category_id==$category->id){
                                                   echo "selected";
                                                  }
-                                                 ?>
-                                                ><?php echo $category->name?></option>
-                                                <?php endforeach;?>
-                                            </select>
-                                            <span class="text-danger"><?php echo $categoryErr?></span>
-                                        </div>
-                                        <div class="mb-2">
-                                            <label for="">Content</label>
-                                            <textarea type="text" class="form-control" name="content" rows="10" ><?php echo $blog->content ?></textarea>
-                                           <span class="text-danger"><?php echo $contentErr?></span>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="">Image</label>
-                                            <input type="file" class="form-control" name="image">
-                                            <img src="../assets/blog-images/<?php echo $blog->image ?>" alt="" style="width:100px;" class="my-2">
-                                             <span class="text-danger"><?php echo $imageErr?></span><br>
-                                        <button class="btn btn-primary " name="blogUpdateBtn" type="submit">Update</button>
-                                    </form>
-                                </div>
-                            </div>
-        </div>
+                                                 ?>><?php echo $category->name?></option>
+                <?php endforeach;?>
+              </select>
+              <span class="text-danger"><?php echo $categoryErr?></span>
+            </div>
+            <div class="mb-2">
+              <label for="">Content</label>
+              <textarea type="text" class="form-control" name="content"
+                rows="10"><?php echo $blog->content ?></textarea>
+              <span class="text-danger"><?php echo $contentErr?></span>
+            </div>
+            <div class="mb-3">
+              <label for="">Image</label>
+              <input type="file" class="form-control" name="image">
+              <img src="../assets/blog-images/<?php echo $blog->image ?>" alt="" style="width:100px;" class="my-2">
+              <span class="text-danger"><?php echo $imageErr?></span><br>
+              <button class="btn btn-primary mt-3 " name="blogUpdateBtn" type="submit">Update</button>
 
-                      
-                       
-                     </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
-                

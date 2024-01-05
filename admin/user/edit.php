@@ -76,8 +76,7 @@ sweetAlert('edit a user', 'index.php?page=user');
                 <option value="admin" <?php if($user->role=='admin'):?> selected <?php endif ?>>Admin</option>
                 <option value="user" <?php if($user->role=='user'):?> selected <?php endif ?>>User</option>
               </select>
-            </div>
-            <button class="btn btn-primary" name="userUpdateBtn" type="submit">Update</button>
+              <button class="btn btn-primary mt-2" name="userUpdateBtn" type="submit">Update</button>
           </form>
         </div>
       </div>

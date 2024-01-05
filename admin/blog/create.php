@@ -92,8 +92,5 @@ sweetAlert('created a blog', 'index.php?page=blog');
         </div>
       </div>
     </div>
-
-
-
   </div>
 </div>
